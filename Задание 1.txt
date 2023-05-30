@@ -1,0 +1,39 @@
+Задание 1 - Docker CLI
+
+1. docker pull busybox
+2. docker run --name pinger -it busybox ping -c 7 netology.ru
+3. docker ps -a
+4. docker logs pinger
+5. docker start pinger
+6. docker ps -a
+7. docker logs pinger
+8.
+
+PS C:\Users\pavel> docker logs pinger
+PING netology.ru (172.67.21.207): 56 data bytes
+64 bytes from 172.67.21.207: seq=0 ttl=62 time=3.498 ms
+64 bytes from 172.67.21.207: seq=1 ttl=62 time=3.333 ms
+64 bytes from 172.67.21.207: seq=2 ttl=62 time=2.417 ms
+64 bytes from 172.67.21.207: seq=3 ttl=62 time=1.964 ms
+64 bytes from 172.67.21.207: seq=4 ttl=62 time=2.267 ms
+64 bytes from 172.67.21.207: seq=5 ttl=62 time=3.659 ms
+64 bytes from 172.67.21.207: seq=6 ttl=62 time=4.346 ms
+
+--- netology.ru ping statistics ---
+7 packets transmitted, 7 packets received, 0% packet loss
+round-trip min/avg/max = 1.964/3.069/4.346 ms
+PING netology.ru (104.22.41.171): 56 data bytes
+64 bytes from 104.22.41.171: seq=0 ttl=62 time=2.360 ms
+64 bytes from 104.22.41.171: seq=1 ttl=62 time=2.870 ms
+64 bytes from 104.22.41.171: seq=2 ttl=62 time=2.867 ms
+64 bytes from 104.22.41.171: seq=3 ttl=62 time=4.367 ms
+64 bytes from 104.22.41.171: seq=4 ttl=62 time=2.531 ms
+64 bytes from 104.22.41.171: seq=5 ttl=62 time=3.253 ms
+64 bytes from 104.22.41.171: seq=6 ttl=62 time=2.510 ms
+
+--- netology.ru ping statistics ---
+7 packets transmitted, 7 packets received, 0% packet loss
+round-trip min/avg/max = 2.360/2.965/4.367 ms
+
+9. docker rm pinger
+10. docker rmi busybox

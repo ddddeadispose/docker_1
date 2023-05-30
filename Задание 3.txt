@@ -1,0 +1,12 @@
+1. docker pull node:15.14         
+2. docker run --name first_node -v "$(pwd)/data:/var/first/data" node:15.14
+3. docker run --name second_node -v "$(pwd)/data:/var/second/data" node:15.14
+4. docker exec -it first_node sh -c 'echo "Test" > /var/first/data/myfile.txt'
+5. touch file.txt
+6. docker exec -it second_node sh
+ls /var/second/data
+cat /var/second/data/myfile.txt
+Test
+7. docker stop first_node second_node
+8. docker rm first_node second_node
+9. docker rmi node:15.14 

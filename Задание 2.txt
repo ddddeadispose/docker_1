@@ -1,0 +1,8 @@
+1. docker pull node:15.14
+2. docker run -it --name mynode -e NAME=Павел -e SURNAME=Пахнутов node:15.14
+3. console.log(`Привет, ${process.env.NAME} ${process.env.SURNAME}`)
+
+Привет, Павел Пахнутов
+
+4. docker rm mynode
+5. docker rmi node:15.14
